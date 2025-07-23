@@ -1,0 +1,24 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        
+
+  <bean id = "dev" class ="com.Khushal.DemoSpring.Dev">
+    <property name ="age" value = "21" /> 
+    <!-- <constructor-arg value= "21"/> --> 
+
+    <!-- these above were just demo we actually want to ,set the object  of the laptop class -->
+
+    <!-- <property name ="Laptop" ref = "lap"/>  // here we are setting the object of the laptop class, so instead of val we use ref -->
+
+    <constructor-arg ref = "lap" /> 
+    <!--  // using a constructor to set the object -->
+
+  </bean>
+
+  <bean id = "lap" class ="com.Khushal.DemoSpring.Laptop">
+
+  </bean>
+
+</beans>
